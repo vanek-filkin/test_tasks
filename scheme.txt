@@ -1,0 +1,28 @@
+Сервер посредник (например FastAPI):
+методы:
+
+PUT     admin/station/create
+POST    admin/station/update/{id}
+DELETE  admin/station/delete/{id}
+GET     api/station/spec/{id}
+AUTH методы, JWT авторизация.
+Пример запроса:
+         service/api/station/spec/a3fsd-afddb-23dfb
+Пример ответа(по описанным моделям):
+{
+"id": "a3fsd-afddb-23dfb",
+"station_desctiption":
+        {
+                "desctiption info from /api/station/description"
+        },
+"gas_specification":
+        {
+                "gas specification from /api/station/gas_specification"
+        }
+"some_metanfo"
+}
+
+Фреймворк FastAPI
+Кеширование с помощью Redis.
+Т.к FastAPI поддерживает асинхронные запросы - httpx для общения с источниками..
+
